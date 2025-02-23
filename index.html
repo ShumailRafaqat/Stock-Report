@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn i {
+            font-size: 18px;
+        }
+        .dashboard { background: #007BFF; color: white; }
+        .whatsapp { background: #25D366; color: white; }
+        .sms { background: #FF9800; color: white; }
+        .print { background: #4CAF50; color: white; }
+        .download { background: #DC3545; color: white; }
+        
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Stock Report</h2>
+        <div class="filter-options">
+            <select>
+                <option>Code</option>
+            </select>
+            <select>
+                <option>Customer</option>
+            </select>
+            <label class="date-label" for="dateFrom">Date From:</label>
+            <input type="date" id="dateFrom">
+            <label class="date-label" for="dateTo">Date To:</label>
+            <input type="date" id="dateTo">
+            <select>
+                <option>Warehouse</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S No</th>
+                    <th>Customer Name</th>
+                    <th>Code</th>
+                    <th>Item</th>
+                    <th>Lot No</th>
+                    <th>Date</th>
+                    <th colspan="2">Type</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                    <th>Balance</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="5"></th>
+                    <th>In</th>
+                    <th>Out</th>
+                    <th colspan="4"></th>
+                </tr>
+            </thead>
+            <tbody id="stockTableBody">
+                <tr>
+                    <td>1</td>
+                    <td>Ali</td>
+                    <td>001</td>
+                    <td>5</td>
+                    <td>202</td>
+                    <td>2003-11-24</td>
+                    <td class="in-cell">10</td>
+                    <td class="out-cell">20</td>
+                    <td>500</td>
+                    <td>1000</td>
+                    <td>10000</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="edit-btn" onclick="editRow(this)">Edit</button>
+                            <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Salman /td>
+                    <td>002</td>
+                    <td>6</td>
+                    <td>205</td>
+                    <td>2003-06-24</td>
+                    <td class="in-cell">79</td>
+                    <td class="out-cell">50</td>
+                    <td>700</td>
+                    <td>1000</td>
+                    <td>5000</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="edit-btn" onclick="editRow(this)">Edit</button>
+                            <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="addRowBtn">Add Row</button>
+
+        <div class="btn-container">
+            <button class="btn dashboard" onclick="goToDashboard()">
+                <i class="fas fa-arrow-left"></i> Go to Dashboard
+            </button>
+            <button class="btn whatsapp" onclick="sendWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Send WhatsApp
+            </button>
+            <button class="btn sms" onclick="sendSMS()">
+                <i class="fas fa-sms"></i> Send SMS
+            </button>
+            <button class="btn print" onclick="printPage()">
+                <i class="fas fa-print"></i> Print Page
+            </button>
+            <button class="btn download" onclick="downloadPDF()">
+                <i class="fas fa-file-pdf"></i> Download as PDF
+            </button>
+        </div>
+    </div>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

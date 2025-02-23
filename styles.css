@@ -1,0 +1,129 @@
+body {
+    background-color: #F7F7F7;
+    font-family: Arial, sans-serif;
+    color: #2C3E50;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    background: linear-gradient(135deg, #EAEAEA, #D1F2EB);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 128, 128, 0.4);
+}
+
+.in-cell {
+    color: green;
+}
+
+.out-cell {
+    color: red;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: #005F5F;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.filter-options {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+select, input[type="date"] {
+    padding: 12px;
+    border: 1px solid #008080;
+    background-color: #ffffff;
+    color: #2C3E50;
+    border-radius: 5px;
+    min-width: 170px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.date-label {
+    font-weight: bold;
+    color: #005F5F;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #008080;
+    padding: 10px;
+    text-align: center;
+    width: 8%;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #005F5F;
+    color: white;
+}
+
+td:nth-child(7), td:nth-child(8) {
+    font-weight: bold;
+}
+
+.edit-btn, .delete-btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #005F5F;
+    color: white;
+}
+
+.edit-btn {
+    margin-right: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#addRowBtn {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 20px;
+    background-color: #008080;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 128, 128, 0.3);
+}
+
+#addRowBtn:hover {
+    background-color: #005F5F;
+    
+}
